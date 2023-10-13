@@ -1,8 +1,13 @@
 module pulumi-playground
 
-go 1.20
+go 1.21
 
-require github.com/pulumi/pulumi/sdk/v3 v3.86.0
+toolchain go1.21.3
+
+require (
+	github.com/pulumi/pulumi-aws/sdk/v6 v6.2.1
+	github.com/pulumi/pulumi/sdk/v3 v3.86.0
+)
 
 require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
