@@ -1,4 +1,17 @@
-# State Backend
+# Targetted State Create/Update/Destroy
+
+> ?
+
+# State Move
+
+> ?
+
+# Refresh State from Existing Resource
+
+> ?
+
+
+# State Backends
 
 ## Local storage
 
@@ -10,7 +23,7 @@ $> pulumilocal login --local
 ## AWS S3
 
 ```
-pulumi login 's3://pulumi-playground?region=us-east-1&awssdk=v2&profile=localstack'
+pulumi login 's3://<bucket-name>?region=us-east-1&awssdk=v2&profile=localstack'
 ```
 
 # State Operations
