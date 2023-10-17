@@ -5,11 +5,22 @@
 # State Move
 
 > ?
+* [ ] Create another stack (stack2) that uses localstack.
+* [ ] Point stack2 to stack1 resources.
+* [ ] Migrate code from an exsiting stack (stack1) to stack2.
+* [ ] Migrate state from stack2 to stack1.
+* [ ] Run `pulumi preview` to validate pulumi sees the resources.
 
 # Refresh State from Existing Resource
 
 > ?
+* [ ] Manually create buckets on localstack.
+* [ ] Add pulumi code that creates the same bucket but do not run it.
+* [ ] Run `pulumi preview` and verify that pulumi does not inteded to create anything.
 
+OR
+
+* [ ] Check if pulumi has any command to translate existing resources into pulumi state.
 
 # State Backends
 
