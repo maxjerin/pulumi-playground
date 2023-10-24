@@ -1,6 +1,7 @@
 import pulumi
 from pulumi_kubernetes.core.v1 import Namespace
 from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+from istio_constants import ISTIO_REPO_URL, ISTIO_VERSION
 
 def istio_pulumi_release():
     ns_istio_system_name = 'istio-system'
@@ -22,11 +23,11 @@ def istio_pulumi_release():
          "istio-base",
          ReleaseArgs(
               chart="base",
-              version="1.19.3",
+              version=ISTIO_VERSION,
               namespace=ns_istio_system.metadata["name"],
             #   create_namespace=False,
               repository_opts=RepositoryOptsArgs(
-                   repo="https://istio-release.storage.googleapis.com/charts"
+                   repo=ISTIO_REPO_URL
                 ),
               skip_await=False
               ),
@@ -37,11 +38,11 @@ def istio_pulumi_release():
          "istiod",
          ReleaseArgs(
               chart="istiod",
-              version="1.19.3",
+              version=ISTIO_VERSION,
               namespace=ns_istio_system.metadata["name"],
             #   create_namespace=False,
               repository_opts=RepositoryOptsArgs(
-                   repo="https://istio-release.storage.googleapis.com/charts"
+                   repo=ISTIO_REPO_URL
                 ),
               skip_await=False
               ),
@@ -52,10 +53,10 @@ def istio_pulumi_release():
          "istio-ingress",
          ReleaseArgs(
               chart="gateway",
-              version="1.19.3",
+              version=ISTIO_VERSION,
               namespace=ns_istio_ingress.metadata["name"],
               repository_opts=RepositoryOptsArgs(
-                   repo="https://istio-release.storage.googleapis.com/charts"
+                   repo=ISTIO_REPO_URL
                 ),
               skip_await=False
               ),
