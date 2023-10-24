@@ -307,3 +307,4 @@ config:
   aws:secretKey: test
   aws:skipCredentialsValidation: 'true'
   aws:skipRequestingAccountId: 'true'
+  kubernetes:context: minikube-ubuntu
