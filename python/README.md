@@ -1,3 +1,13 @@
+# Pulimi Python Implementation
+
+## Pre-requisite
+
+Python venv should get created when using `pulumi init`. If it does not, then a lot of other things won't work.
+```
+# This should create python venv
+pulimi-playground/python $ pulumi init
+```
+
 # Dependency Management
 
 ## Save dependencies
