@@ -20,15 +20,28 @@ $> localstack stop
 #### Local AWS
 
 ```
-export AWS_ACCESS_KEY_ID="test"
-export AWS_SECRET_ACCESS_KEY="test"
-export AWS_DEFAULT_REGION="us-east-1"
+$ export AWS_ACCESS_KEY_ID="test"
+$ export AWS_SECRET_ACCESS_KEY="test"
+$ export AWS_DEFAULT_REGION="us-east-1"
 
-aws --endpoint-url=http://localhost:4566 kinesis list-streams
+$ aws --endpoint-url=http://localhost:4566 kinesis list-streams
 
-aws configure --profile localstack
-export AWS_PROFILE=localstack
+$ aws configure --profile localstack
+$ export AWS_PROFILE=localstack
 ```
+
+#### Local Minikube
+
+```
+$ minikube addons enable volumesnapshots
+$ minikube addons enable csi-hostpath-driver
+
+$ minikube start --nodes=3 --memory=4096
+```
+
+#### Remote Minikube
+
+Refer to [these instructions](https://github.com/maxjerin/kubernetes-playground/blob/main/Minikube.md)
 
 ## Init Pulumi Project
 

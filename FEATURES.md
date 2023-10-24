@@ -1,8 +1,17 @@
 # Targetted State Create/Update/Destroy
 
-> ?
+## Delete targetted resource
+```
+$ pulumi state -u -i
+$ pulumi destroy --target "<urn>" --target-dependents
+```
 
-# State Move
+# State Operations
+
+## Delete resource from state
+```
+$ pulumi state delete "<urn>"
+```
 
 > ?
 * [ ] Create another stack (stack2) that uses localstack.
@@ -13,6 +22,9 @@
 
 # Refresh State from Existing Resource
 
+```
+$ pulumi refresh
+```
 > ?
 * [ ] Manually create buckets on localstack.
 * [ ] Add pulumi code that creates the same bucket but do not run it.
