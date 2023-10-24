@@ -6,18 +6,18 @@
 
 #### CLI's
 ```
-$> brew install pulumi/tap/pulumi
-$> brew install go
+$ brew install pulumi/tap/pulumi
+$ brew install go
 
-$> brew install docker
-$> brew install minikube
-$> brew install localstack
+$ brew install docker
+$ brew install minikube
+$ brew install localstack
 ```
 
 #### Local AWS
 
 ```
-$> localstack start -d
+$ localstack start -d
 
 $ export AWS_ACCESS_KEY_ID="test"
 $ export AWS_SECRET_ACCESS_KEY="test"
@@ -29,7 +29,7 @@ $ aws configure --profile localstack
 $ export AWS_PROFILE=localstack
 
 # To stop localstack
-$> localstack stop
+$ localstack stop
 ```
 
 #### Local Minikube

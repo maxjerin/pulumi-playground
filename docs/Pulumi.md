@@ -1,8 +1,10 @@
-## Init Pulumi Project
+# Pulumi Learnings
+
+## Initializing a new  Pulumi project
 
 ```
-mkdir <pulumi-project-folder> && cd <pulumi-project-folder>
-$> pulumilocal new aws-go
-$> pulumilocal config set aws:profile localstack
-$> pulumilocal preview
+$ mkdir <pulumi-project-folder> && cd <pulumi-project-folder>
+$ pulumi new aws-go
+$ pulumi config set aws:profile localstack
+$ pulumi preview
 ```
