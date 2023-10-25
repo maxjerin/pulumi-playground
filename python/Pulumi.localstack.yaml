@@ -308,3 +308,4 @@ config:
   aws:skipCredentialsValidation: 'true'
   aws:skipRequestingAccountId: 'true'
   kubernetes:context: minikube-ubuntu
+  kubernetes:enableServerSideApply: "true"
